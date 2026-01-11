@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quotes Generator — rjones1307</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container" id="app">
+    <header>
+      <h1>Quotes Generator</h1>
+      <p class="lead">Random quotes, save favorites, and share — by rjones1307</p>
+    </header>
+
+    <section class="card" aria-live="polite">
+      <div id="loader" class="loader" hidden>Loading…</div>
+
+      <blockquote id="quoteCard" class="quote" hidden>
+        <p id="quoteText">“Loading…”</p>
+        <footer id="quoteAuthor">— Author</footer>
+      </blockquote>
+
+      <div class="controls">
+        <button id="newQuoteBtn" class="btn">New Quote</button>
+        <button id="saveBtn" class="btn btn-outline" title="Save to favorites">Save</button>
+        <button id="tweetBtn" class="btn btn-twitter" title="Tweet this quote">Tweet</button>
+        <button id="showFavsBtn" class="btn btn-ghost">Favorites</button>
+      </div>
+    </section>
+
+    <section id="favoritesSection" class="card hidden">
+      <h2>Favorites</h2>
+      <ul id="favoritesList" class="favorites" aria-live="polite"></ul>
+      <div class="fav-actions">
+        <button id="closeFavs" class="btn">Close</button>
+        <button id="clearFavs" class="btn btn-danger">Clear All</button>
+      </div>
+    </section>
+
+    <footer>
+      <p>Demo uses the public <a href="https://quotable.io" target="_blank" rel="noopener">Quotable API</a>. Offline fallback included.</p>
+    </footer>
+  </main>
+
+  <script src="script.js" type="module"></script>
+</body>
+</html>
